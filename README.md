@@ -1,2 +1,2 @@
 # Totally-Spies
-# Please Describe how our project should work
+# Catalogue of goods in supermarket
