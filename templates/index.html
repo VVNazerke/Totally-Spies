@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hi</h1>
+    <table class="table">
+        <caption>List of books</caption>
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in object_list %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ i.name }}</td>
+                <td>{{ i.price }}</td>
+                <td>{{ i.discount }}</td>
+                <td>{{ i.author.name }}</td>
+                <td>{{ i.genre.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
